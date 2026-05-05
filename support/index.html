@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support — TapToot</title>
+  <title>Support — Aside</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -15,56 +15,80 @@
     }
     h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
     h2 { font-size: 1.15rem; margin-top: 2rem; }
+    h3 { font-size: 1rem; margin-top: 1.25rem; }
     .updated { color: #6e6e73; font-size: 0.95rem; margin-top: 0; }
     a { color: #0071e3; }
     ol li { margin-bottom: 0.4rem; }
   </style>
 </head>
 <body>
-  <h1>TapToot Support</h1>
-  <p class="updated"><strong>Last updated:</strong> April 30, 2026</p>
+  <h1>Aside Support</h1>
+  <p class="updated"><strong>Last updated:</strong> May 5, 2026</p>
 
-  <p>TapToot is a soundboard app for iPhone with Back Tap integration. If something isn't working, the answer is probably below. If not, email us — we read every message.</p>
+  <p>Aside is a hands-free voice-capture utility for iPhone. Tap your phone's back, press the Action Button, or say "Hey Siri" — Aside records, transcribes on-device, and turns the result into a summary, class notes, brainstorm, or to-do list. A separate Sounds mode lets you fire designed chimes or your own recordings the same hands-free way.</p>
+  <p>If something isn't working, the answer is probably below. If not, email us — we read every message.</p>
 
   <h2>Contact</h2>
   <p>Email: <a href="mailto:ap3garcia@gmail.com">ap3garcia@gmail.com</a></p>
   <p>Please include your iPhone model and iOS version so we can reproduce the issue.</p>
 
-  <h2>Setting Up Back Tap</h2>
-  <p>Back Tap is what lets you play a sound by double- or triple-tapping the back of your iPhone, even from the lock screen. To set it up:</p>
+  <h2>Setting Up a Hands-Free Trigger</h2>
+  <p>Aside ships an App Shortcut named <strong>Toggle Voice Note</strong> that any of these surfaces can run. Set up whichever one you prefer (or several):</p>
+
+  <h3>Back Tap (any iPhone 8 or later)</h3>
   <ol>
-    <li>Open TapToot once so iOS registers the "Play Toot" shortcut.</li>
     <li>Open the Settings app.</li>
-    <li>Tap <strong>Accessibility</strong>.</li>
-    <li>Tap <strong>Touch</strong>.</li>
+    <li>Tap <strong>Accessibility</strong> → <strong>Touch</strong>.</li>
     <li>Scroll to the bottom and tap <strong>Back Tap</strong>.</li>
     <li>Choose <strong>Double Tap</strong> or <strong>Triple Tap</strong>.</li>
-    <li>Under "Shortcuts," select <strong>Play Toot</strong>.</li>
+    <li>Under "Shortcuts," select <strong>Toggle Voice Note</strong>.</li>
   </ol>
-  <p>The Setup tab inside TapToot walks you through the same steps with on-screen instructions.</p>
+
+  <h3>Action Button (iPhone 15 Pro and later)</h3>
+  <ol>
+    <li>Open the Settings app.</li>
+    <li>Tap <strong>Action Button</strong>.</li>
+    <li>Swipe to the <strong>Shortcut</strong> option.</li>
+    <li>Tap <strong>Choose a Shortcut</strong> → under Aside, select <strong>Toggle Voice Note</strong>.</li>
+  </ol>
+
+  <h3>Siri</h3>
+  <p>Say "Hey Siri, Toggle Voice Note with Aside." To customize the phrase, open the Shortcuts app, tap the Toggle Voice Note shortcut, and edit it.</p>
+
+  <h3>AssistiveTouch and Voice Control</h3>
+  <p>Both are configured under Settings → Accessibility. The Setup tab inside Aside walks through each one with on-screen instructions.</p>
 
   <h2>Common Issues</h2>
 
-  <h3 style="font-size:1rem; margin-top:1.25rem;">Back Tap fires but no sound plays</h3>
-  <p>Make sure your iPhone isn't on silent (the ring/silent switch on the side). TapToot plays through the ringer audio channel, so silent mode will mute it.</p>
+  <h3>The trigger fires but nothing seems to happen</h3>
+  <p>Aside records in the background and saves the note when you trigger it again. Open the app, tap the Notes tab, and pull-to-refresh — your note should be at the top. If you see a "Recording…" banner that won't clear, fully quit Aside (swipe up from the app switcher) and reopen it.</p>
 
-  <h3 style="font-size:1rem; margin-top:1.25rem;">"Play Toot" doesn't show up under Back Tap shortcuts</h3>
-  <p>Open TapToot once and let it fully load, then close it. iOS only registers App Intents after the app has run at least once. Re-check the Back Tap settings list — it should appear.</p>
+  <h3>"Toggle Voice Note" doesn't show up in the Shortcuts list</h3>
+  <p>Open Aside once and let it fully load, then close it. iOS only registers App Intents after the app has run at least once. Re-check the Shortcuts list — it should appear.</p>
 
-  <h3 style="font-size:1rem; margin-top:1.25rem;">Music or a podcast pauses when a toot plays</h3>
-  <p>This is intentional. While a sound plays, TapToot briefly takes over your iPhone's audio focus so the toot is guaranteed to come through. Audio from other apps resumes as soon as the toot finishes.</p>
+  <h3>The Summary / To-Do / Class Notes chips are grayed out</h3>
+  <p>AI formats are generated by Apple Intelligence, which requires an iPhone 15 Pro, 15 Pro Max, or any iPhone 16 or later, plus Apple Intelligence enabled in Settings. Aside shows the reason inline when the feature is unavailable. Transcription still works on every supported iPhone.</p>
 
-  <h3 style="font-size:1rem; margin-top:1.25rem;">A recording I imported won't play</h3>
+  <h3>"Send to Reminders" doesn't do anything</h3>
+  <p>The first time you tap it, iOS asks for Reminders access. If you tapped "Don't Allow," re-enable it in Settings → Privacy &amp; Security → Reminders → Aside. Aside only writes the parsed checklist items; it never reads your existing reminders.</p>
+
+  <h3>Recording sounds quiet or cuts out with AirPods</h3>
+  <p>Aside enables both Bluetooth audio profiles for the mic, but switching between AirPods and the built-in mic mid-recording can drop a fraction of a second. If audio quality is poor, force the route by manually selecting your input in Control Center before triggering the note.</p>
+
+  <h3>Music or a podcast pauses when I record or play a sound</h3>
+  <p>This is intentional. While Aside records or plays a soundboard tone, it briefly takes over your iPhone's audio focus so the recording isn't drowned out and the sound is guaranteed to come through. Audio from other apps resumes as soon as Aside is done.</p>
+
+  <h3>An imported sound won't play</h3>
   <p>Some audio formats aren't supported by iOS playback. If a file fails to play, try converting it to <code>.m4a</code> in Voice Memos or another audio tool, then re-importing.</p>
 
-  <h3 style="font-size:1rem; margin-top:1.25rem;">Microphone access denied</h3>
-  <p>If you tapped "Don't Allow" the first time TapToot asked, re-enable it in Settings → Privacy &amp; Security → Microphone → TapToot.</p>
+  <h3>Microphone or Speech Recognition access denied</h3>
+  <p>If you tapped "Don't Allow" the first time Aside asked, re-enable the permission in Settings → Privacy &amp; Security → Microphone (or Speech Recognition) → Aside.</p>
 
   <h2>Privacy</h2>
-  <p>TapToot collects nothing and sends nothing off your device. Read the full policy: <a href="../">Privacy Policy</a>.</p>
+  <p>Aside collects nothing and sends nothing off your device. Voice, transcripts, and AI formatting are processed entirely on-device. Read the full policy: <a href="../">Privacy Policy</a>.</p>
 
   <h2>Feature Requests</h2>
-  <p>Want a new sound? A new feature? Send an email — we keep a list and ship updates regularly.</p>
+  <p>Want a new format, a new trigger surface, or a new soundboard chime? Send an email — we keep a list and ship updates regularly.</p>
 
   <footer style="margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e5e5e7; color: #6e6e73; font-size: 0.85rem; text-align: center;">
     &copy; 2026 RyGar Labs
